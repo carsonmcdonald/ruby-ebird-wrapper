@@ -1,8 +1,8 @@
 # EBird
 
-https://confluence.cornell.edu/display/CLOISAPI/eBird+API+1.1
+This is a simple wrapper for the [eBird API version 1.1](https://confluence.cornell.edu/display/CLOISAPI/eBird+API+1.1)
 
-TODO: Write a gem description
+The library also wraps the portion of the [avian knowledge API](https://confluence.cornell.edu/display/CLOISAPI/AKNAPIs) that is needed for the eBird API.
 
 ## Installation
 
@@ -20,12 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'ebird'
 
-## Contributing
+ak = EBird::AvianKnowledge.new
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+puts ak.country_list
+
+ebird = EBird::EBird.new
+
+puts ebird.species_reference
+```

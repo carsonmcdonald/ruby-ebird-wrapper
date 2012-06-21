@@ -1,14 +1,18 @@
 require 'ebird'
 require 'pp'
 
-ak = AvianKnowledge.new
+#
+# This file contains an example of every call that can be made with the library
+#
+
+ak = EBird::AvianKnowledge.new
 
 #pp ak.country_list
 
 #pp ak.subnational1_list
 #pp ak.subnational1_list(:countryCode => 'US')
 
-ebird = EBird.new
+ebird = EBird::EBird.new
 
 #pp ebird.species_reference
 #pp ebird.species_reference(:locale => 'fr_CA')
